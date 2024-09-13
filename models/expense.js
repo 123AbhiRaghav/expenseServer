@@ -8,6 +8,6 @@ const ExpenseSchema = new mongoose.Schema({
   date: { type: Date, default: Date.now },
   paymentMethod: { type: String, required: true,enum: ["Cash", "Credit Card", "Bank Transfer"], },
   receipt:{type:String}
-});
+}, {timestamps: true});
 
 module.exports = mongoose.model('Expense', ExpenseSchema);
